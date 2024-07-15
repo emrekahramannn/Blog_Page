@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+
+{% block container-fluid %}
+    <header>
+    <div class="text-center pt-5 px-4 border-bottom">
+        <h1 class="display-4 fw-bold">Awesome Blog</h1>
+        <!-- Content -->
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                itaque maxime minus voluptates vel in ducimus earum animi nesciunt quod.
+            </p>
+            <!-- Buttons -->
+            <div class="mb-5 d-grid gap-2 d-md-flex justify-content-md-center">
+                <a href="/trends/" class="btn btn-primary btn-lg">
+                    <i class="fa-solid fa-caret-right me-1"></i>Trends
+                </a>
+                <a href="/blogs/" class="btn btn-outline-secondary btn-lg">
+                    <i class="fa-solid fa-caret-right me-1"></i>Blogs
+                </a>
+            </div>
+            <!-- Image -->
+            <div style="max-height: 30vh" class="overflow-hidden">
+                <div class="container px-5">
+                    {% load static %}
+                    <img
+                        src="{% static 'img/bg2.png' %}"
+                        alt=""
+                        class="img-fluid border rounded-3 shadow-lg mb-4"
+                        width="700"
+                        height="500"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+{% endblock container-fluid %}

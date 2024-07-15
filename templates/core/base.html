@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    {% comment %} head added {% endcomment %}
+    {% include 'core/head.html' %}
+    <body class="h-100 d-flex flex-column">
+        {% comment %} navbar added {% endcomment %}
+        {% include 'core/navbar.html' %}
+
+        {% comment %} special to others {% endcomment %}
+        {% block container %}
+        {% endblock container %}
+
+        {% comment %} special to home page {% endcomment %}
+        {% block container-fluid %}
+        {% endblock container-fluid %}
+
+
+        {% comment %} footer added {% endcomment %}
+        {% include 'core/footer.html' %}
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    </body>
+</html>

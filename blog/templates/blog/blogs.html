@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block container %}
+    <main>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-3 d-none d-md-block">
+                    {% include 'blog/components/side_bar.html' %}
+                </div>
+                <div class="col-md-9">
+                    {% include 'blog/components/bread_crumb.html' %}
+
+                    {% for blog in FAKE_DB_BLOGS|slice:"4" %}
+                        {% include 'blog/components/card.html' with blog_title=blog.title blog_img=blog.image blog_content=blog.content url=blog.id  %}
+                    {% endfor %}
+            
+                    {% include 'blog/components/pagination.html' %}
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock container %}

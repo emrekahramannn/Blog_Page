@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block container %}
+    <div class="container">
+        <div class="row my-5">
+            <div class="d-none d-md-block col-md-3">
+                {% include 'blog/components/side_bar.html' %}
+            </div>
+            <div class="col-md-7 offset-md-1">
+                <div class="card">
+                    <img src="/static/img/{{id}}.jpeg" class="card-img-top w-100 object-fit-cover" alt="blog image" style="height: 250px"></img>
+                    <div class="card-body">
+                        <h3 class="card-title h4">
+                            {{ blog_title }}
+                        </h3>
+                        <p class="card-text lead">{{ blog_content }}</p>
+                        <p class="card-text lead">{{ blog_content }}</p>
+                        <p class="card-text lead">{{ blog_content }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock container %}
